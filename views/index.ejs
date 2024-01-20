@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <h1 id="heading-d">Daily Vlogs</h1>
+ <%     for(let line of comments){  %>  
+  <div class="box">
+    <div class="comments">
+      <div id="space"></div>
+      <h1>&nbsp; Id : - <%=line.id%> </h1>
+    <h2>&nbsp;  Name :- <%= line.username%></h2>
+    <h3>&nbsp; &nbsp; Comment :- <%= line.comment%></h3>
+    <button id="submit-btn" type="submit"><a style="text-decoration: none;" href="/blogs/<%= line.id %>">Show</a></button>
+    
+      <button id="submit-btn" type="submit"><a style="text-decoration: none;" href="/blogs/<%= line.id %>/edit">Edit</a></button>
+      <form action="/blogs/<%= line.id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    
+    <div class="img">    <img src=<%=line.imgadd %> alt="" srcset="" ></div>
+    </div>
+
+    
+  </div>
+        
+   <%   } %>
+</body>
+</html>

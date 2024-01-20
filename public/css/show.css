@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: yellowgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card{
+    margin-top: 5%;
+    position: absolute;
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 25%;
+    height: 40%;
+}
+
+.show{
+    
+    left: 10%;
+    position: relative;
+    
+}
+#header-head{
+    text-align: center ;
+}
